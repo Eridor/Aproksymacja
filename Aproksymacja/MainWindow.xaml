@@ -1,0 +1,25 @@
+﻿<Window x:Class="Aproksymacja.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="tablice aproksymacji" Height="450" Width="525">
+    <Grid>
+        <StackPanel Orientation="Horizontal">
+            <GroupBox Header="Funkcja" Margin="10,10,10,0" VerticalAlignment="Top">
+                <DataGrid Name="DataFunc" IsReadOnly="true" AutoGenerateColumns="False">
+                    <DataGrid.Columns>
+                        <DataGridTextColumn FontWeight="Bold" Binding="{Binding X}" Header="x" />
+                        <DataGridTextColumn Binding="{Binding Y}" Header="y = f(x)" />
+                    </DataGrid.Columns>
+                </DataGrid>
+            </GroupBox>
+            <GroupBox Header="Tab. ap. różnicowej" Margin="10"  VerticalAlignment="Top">
+                <DataGrid Name="DataD" IsReadOnly="true"></DataGrid>
+            </GroupBox>
+            <GroupBox Header="Tab. ap.  liniowej" Margin="10"  VerticalAlignment="Top">
+                <DataGrid Name="DataA" IsReadOnly="true"></DataGrid>
+            </GroupBox>
+
+        </StackPanel>
+        
+    </Grid>
+</Window>
